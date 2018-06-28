@@ -1,0 +1,8 @@
+.button {
+  color: black;
+  text-decoration: none;
+  border:1px solid black;
+  padding: 3px;
+  background: #f2f2f2;
+  margin-right: 5px;
+}

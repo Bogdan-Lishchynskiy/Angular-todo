@@ -1,0 +1,14 @@
+<div>
+  <ul style="list-style: none">
+    <li *ngFor="let user of users">
+      <img src="{{user.avatar_url}}" style="max-width: 200px"/>
+      <span style="position: relative;bottom: 150px;left: 50px;" >{{user.login}}</span>
+      <a class="button" href="{{user.html_url}}">
+        see profile
+      </a>
+      <button>
+          see details
+      </button>
+    </li>
+  </ul>
+</div>
