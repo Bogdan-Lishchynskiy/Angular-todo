@@ -1,6 +1,14 @@
 <div>
+    <input
+      type="text"
+      id="searchTextId"
+      [(ngModel)]="searchUser.login"
+      placeholder="Search By Login">
+      <p>{{searchUser.login}}</p>
+    <button (click)="getUsersFiltered('User')">Users</button>
+    <button (click)="getUsersFiltered('Organization')">Organizations</button>
   <ul style="list-style: none">
-    <li *ngFor="let user of users">
+    <li *ngFor="let user of displayUsers | filterBy: searchUser">
       <img src="{{user.avatar_url}}" style="max-width: 200px"/>
       <span style="position: relative;bottom: 150px;left: 50px;" >{{user.login}}</span>
       <a class="button" href="{{user.html_url}}">
